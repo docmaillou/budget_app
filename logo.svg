@@ -1,0 +1,18 @@
+<svg width="200" height="220" viewBox="0 0 200 220" xmlns="http://www.w3.org/2000/svg">
+  <g fill="none" fill-rule="evenodd">
+    <!-- Personnes (famille) -->
+    <circle cx="60" cy="50" r="20" fill="#3B82F6"/>
+    <circle cx="140" cy="50" r="20" fill="#3B82F6"/>
+    <circle cx="100" cy="90" r="20" fill="#3B82F6"/>
+    <path d="M40 100c0-10 8-18 18-18h84c10 0 18 8 18 18v20H40v-20z" fill="#3B82F6"/>
+
+    <!-- Bouclier avec signe dollar -->
+    <path d="M60 120h80v30c0 20-20 40-40 40s-40-20-40-40v-30z" fill="#10B981"/>
+    <text x="100" y="155" font-size="30" text-anchor="middle" fill="#FFFFFF" font-family="Arial, sans-serif">$</text>
+
+    <!-- Texte -->
+    <text x="100" y="210" font-size="20" text-anchor="middle" fill="#111827" font-family="Arial, sans-serif" font-weight="bold">
+      BUDGET APP
+    </text>
+  </g>
+</svg>
