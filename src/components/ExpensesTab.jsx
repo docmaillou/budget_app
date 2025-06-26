@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { PlusCircle, DollarSign, Calendar, Trash2, Mic, MicOff, HelpCircle, X } from 'lucide-react';
+import { PlusCircle, DollarSign, Calendar, Trash2, Mic, MicOff, HelpCircle, X, Upload, FileText } from 'lucide-react';
 
 const ExpensesTab = ({
   currentData,
@@ -30,7 +30,6 @@ const ExpensesTab = ({
 
       recognitionInstance.onstart = () => {
         setIsListening(true);
-        setVoiceStatus('Écoute en cours... Dites par exemple: "Épicerie 25 euros courses alimentaires"');
       };
 
       recognitionInstance.onend = () => {
@@ -292,18 +291,17 @@ const ExpensesTab = ({
 
               <button
                 onClick={toggleVoiceRecognition}
-                disabled={isListening}
                 className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-colors ${
                   isListening
-                    ? 'bg-red-100 text-red-700 cursor-not-allowed'
+                    ? 'bg-red-100 text-red-700 hover:bg-red-200'
                     : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
                 }`}
-                title={isListening ? 'Écoute en cours...' : 'Commande vocale'}
+                title={isListening ? 'Cliquez pour arrêter l\'écoute' : 'Commande vocale'}
               >
                 {isListening ? (
                   <>
                     <MicOff className="w-4 h-4" />
-                    <span className="hidden sm:inline">Écoute...</span>
+                    <span className="hidden sm:inline">Arrêter</span>
                   </>
                 ) : (
                   <>
@@ -338,6 +336,37 @@ const ExpensesTab = ({
             </p>
           </div>
         )}
+
+        {/* Recording Animation Overlay - Cliquable pour arrêter */}
+        {isListening && (
+          <button
+            onClick={toggleVoiceRecognition}
+            className="mb-4 w-full p-4 bg-red-50 rounded-lg border-2 border-red-200 border-dashed animate-pulse hover:bg-red-100 transition-colors cursor-pointer"
+            title="Cliquez pour arrêter l'enregistrement"
+          >
+            <div className="flex items-center justify-center gap-4">
+              <div className="relative">
+                <Mic className="w-8 h-8 text-red-600" />
+                <div className="absolute -inset-3 border-2 border-red-300 rounded-full animate-ping"></div>
+                <div className="absolute -inset-1 border border-red-400 rounded-full animate-pulse"></div>
+              </div>
+              <div className="text-center">
+                <p className="text-red-700 font-bold text-lg">🎤 Enregistrement en cours...</p>
+                <p className="text-red-600 text-sm">Dites par exemple: "Épicerie 25 dollars courses hebdomadaires"</p>
+              </div>
+              <div className="flex gap-1 items-end">
+                <div className="w-2 h-8 bg-red-500 rounded animate-pulse"></div>
+                <div className="w-2 h-6 bg-red-400 rounded animate-pulse" style={{animationDelay: '0.1s'}}></div>
+                <div className="w-2 h-10 bg-red-500 rounded animate-pulse" style={{animationDelay: '0.2s'}}></div>
+                <div className="w-2 h-4 bg-red-400 rounded animate-pulse" style={{animationDelay: '0.3s'}}></div>
+                <div className="w-2 h-7 bg-red-500 rounded animate-pulse" style={{animationDelay: '0.4s'}}></div>
+                <div className="w-2 h-9 bg-red-400 rounded animate-pulse" style={{animationDelay: '0.5s'}}></div>
+                <div className="w-2 h-5 bg-red-500 rounded animate-pulse" style={{animationDelay: '0.6s'}}></div>
+              </div>
+            </div>
+          </button>
+        )}
+
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <select
             value={newExpense.category}
