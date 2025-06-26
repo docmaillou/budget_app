@@ -3,16 +3,16 @@ import { PlusCircle, DollarSign, Users, AlertTriangle, TrendingUp, TrendingDown,
 
 const FamilyBudgetApp = () => {
   const [activeTab, setActiveTab] = useState('dashboard');
-  const [familyMembers] = useState(['Mom', 'Dad', 'Alex', 'Sarah']);
-  const [currentMember, setCurrentMember] = useState('Mom');
+  const [familyMembers] = useState(['Antoine', 'Dad', 'Alex', 'Sarah']);
+  const [currentMember, setCurrentMember] = useState('Antoine');
   const [monthlyIncome, setMonthlyIncome] = useState(5000);
   const [editingIncome, setEditingIncome] = useState(false);
   const [tempIncome, setTempIncome] = useState(5000);
 
   const [expenses, setExpenses] = useState([
-    { id: 1, category: 'Groceries', amount: 120, member: 'Mom', date: '2025-06-25', description: 'Weekly shopping' },
+    { id: 1, category: 'Groceries', amount: 120, member: 'Antoine', date: '2025-06-25', description: 'Weekly shopping' },
     { id: 2, category: 'Gas', amount: 45, member: 'Dad', date: '2025-06-24', description: 'Shell station' },
-    { id: 3, category: 'Bills', amount: 280, member: 'Mom', date: '2025-06-23', description: 'Electricity bill' },
+    { id: 3, category: 'Bills', amount: 280, member: 'Antoine', date: '2025-06-23', description: 'Electricity bill' },
     { id: 4, category: 'Entertainment', amount: 35, member: 'Alex', date: '2025-06-22', description: 'Movie tickets' },
   ]);
 
@@ -31,7 +31,7 @@ const FamilyBudgetApp = () => {
     category: 'Groceries',
     amount: '',
     description: '',
-    member: 'Mom'
+    member: 'Antoine'
   });
 
   const [savingsGoal, setSavingsGoal] = useState(1000);
