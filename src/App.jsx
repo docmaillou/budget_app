@@ -382,51 +382,54 @@ const FamilyBudgetApp = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 pb-20 md:pb-0">
       {/* Header */}
-      <div className="bg-white shadow-sm border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center py-4">
+      <div className="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-40">
+        <div className="max-w-7xl mx-auto px-3 md:px-4 lg:px-8">
+          <div className="flex justify-between items-center py-2 md:py-4">
             <button
-              onClick={() => setActiveTab('dashboard')}
-              className={`flex items-center gap-3 rounded-lg p-2 transition-colors group hover:bg-gray-50
-              }`}
+              onClick={() => {
+                setActiveTab('dashboard');
+                setShowSettings(false);
+              }}
+              className="flex items-center gap-2 md:gap-3 rounded-lg p-1 md:p-2 transition-colors group hover:bg-gray-50"
             >
-              <div className="w-10 h-10 rounded-lg flex items-center justify-center">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg flex items-center justify-center">
                 <img
                   src="./budget_logo.png"
                   alt="Budget Familial Logo"
-                  className="w-10 h-10 rounded-lg object-cover"
+                  className="w-8 h-8 md:w-10 md:h-10 rounded-lg object-cover"
                 />
               </div>
-              <div className="text-left hidden sm:block">
-                <h1 className={`text-2xl font-bold transition-colors text-gray-900 group-hover:text-blue-600 }`}>
-                  Budget Familial
+              <div className="text-left">
+                <h1 className="text-lg md:text-2xl font-bold transition-colors text-gray-900 group-hover:text-blue-600">
+                  <span className="hidden sm:inline">Budget Familial</span>
+                  <span className="sm:hidden">Budget</span>
                 </h1>
-                <p className="text-gray-600 text-sm">Gérez vos finances familiales ensemble</p>
+                <p className="text-xs md:text-sm text-gray-600 hidden md:block">Gérez vos finances familiales ensemble</p>
               </div>
             </button>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 md:gap-4">
               <button
                 onClick={() => setShowSettings(!showSettings)}
-                className="flex items-center gap-2 px-3 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
+                className="flex items-center gap-1 md:gap-2 px-2 py-1 md:px-3 md:py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
               >
-                <Settings className="w-5 h-5" />
-                <span className="hidden sm:inline">Paramètres</span>
+                <Settings className="w-4 h-4 md:w-5 md:h-5" />
+                <span className="hidden lg:inline text-sm">Paramètres</span>
               </button>
-              <div className="flex items-center gap-2">
-                <Users className="w-5 h-5 text-gray-500" />
+              <div className="flex items-center gap-1 md:gap-2">
+                <Users className="w-4 h-4 md:w-5 md:h-5 text-gray-500 hidden md:block" />
                 <select
                   value={currentMember}
                   onChange={(e) => setCurrentMember(e.target.value)}
-                  className="px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="px-2 py-1 md:px-3 md:py-2 border border-gray-300 rounded-lg text-xs md:text-sm focus:ring-2 focus:ring-blue-500 focus:border-blue-500 max-w-20 md:max-w-none"
                 >
                   {familyMembers.map(member => (
                     <option key={member} value={member}>{member}</option>
                   ))}
                 </select>
               </div>
-              <div className="flex items-center gap-2 text-gray-600">
+              <div className="hidden lg:flex items-center gap-2 text-gray-600">
                 <Calendar className="w-5 h-5" />
                 <span>Juin 2025</span>
               </div>
@@ -453,8 +456,8 @@ const FamilyBudgetApp = () => {
         </div>
       ) : (
         <>
-          {/* Navigation */}
-          <div className="bg-white border-b border-gray-200">
+          {/* Navigation Desktop */}
+          <div className="hidden md:block bg-white border-b border-gray-200">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <nav className="flex space-x-8">
                 {[
@@ -465,7 +468,10 @@ const FamilyBudgetApp = () => {
                 ].map(({ id, label, icon: Icon }) => (
                   <button
                     key={id}
-                    onClick={() => setActiveTab(id)}
+                    onClick={() => {
+                      setActiveTab(id);
+                      setShowSettings(false);
+                    }}
                     className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${
                       activeTab === id
                         ? 'border-blue-500 text-blue-600'
@@ -481,7 +487,7 @@ const FamilyBudgetApp = () => {
           </div>
 
           {/* Main Content */}
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="max-w-7xl mx-auto px-3 md:px-4 lg:px-8 py-4 md:py-8">
             {activeTab === 'dashboard' && (
               <Dashboard
                 currentData={currentData}
@@ -536,6 +542,36 @@ const FamilyBudgetApp = () => {
             )}
           </div>
         </>
+      )}
+
+      {/* Navigation Mobile - Bottom */}
+      {!showSettings && (
+        <div className="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50">
+          <nav className="flex justify-around">
+            {[
+              { id: 'dashboard', label: 'Accueil', icon: TrendingUp },
+              { id: 'expenses', label: 'Dépenses', icon: DollarSign },
+              { id: 'budget', label: 'Budget', icon: Target },
+              { id: 'family', label: 'Famille', icon: Users }
+            ].map(({ id, label, icon: Icon }) => (
+              <button
+                key={id}
+                onClick={() => {
+                  setActiveTab(id);
+                  setShowSettings(false);
+                }}
+                className={`flex flex-col items-center justify-center py-2 px-3 min-w-0 flex-1 transition-colors ${
+                  activeTab === id
+                    ? 'text-blue-600'
+                    : 'text-gray-500 hover:text-gray-700'
+                }`}
+              >
+                <Icon className={`w-5 h-5 mb-1 ${activeTab === id ? 'text-blue-600' : 'text-gray-500'}`} />
+                <span className="text-xs font-medium truncate">{label}</span>
+              </button>
+            ))}
+          </nav>
+        </div>
       )}
     </div>
   );

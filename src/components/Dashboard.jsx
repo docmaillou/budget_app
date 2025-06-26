@@ -43,11 +43,11 @@ const Dashboard = ({
       )}
 
       {/* Summary Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-blue-50 rounded-lg p-4 border border-blue-200">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-4">
+        <div className="bg-blue-50 rounded-lg p-3 md:p-4 border border-blue-200">
           <div className="flex items-center justify-between">
-            <div>
-              <p className="text-blue-600 text-sm font-medium">Revenus Mensuels</p>
+            <div className="min-w-0 flex-1">
+              <p className="text-blue-600 text-xs md:text-sm font-medium truncate">Revenus</p>
               <div className="flex items-center gap-2">
                 {editingIncome ? (
                   <div className="flex items-center gap-1">
@@ -68,7 +68,7 @@ const Dashboard = ({
                   </div>
                 ) : (
                   <div className="flex items-center gap-2">
-                    <p className="text-2xl font-bold text-blue-800">${currentData.monthlyIncome.toLocaleString()}</p>
+                    <p className="text-lg md:text-2xl font-bold text-blue-800">${currentData.monthlyIncome.toLocaleString()}</p>
                     <button onClick={() => {
                       setEditingIncome(true);
                       // tempIncome sera initialisé par handleIncomeChange
@@ -79,39 +79,39 @@ const Dashboard = ({
                 )}
               </div>
             </div>
-            <Wallet className="w-8 h-8 text-blue-600" />
+            <Wallet className="w-6 h-6 md:w-8 md:h-8 text-blue-600 flex-shrink-0" />
           </div>
         </div>
 
-        <div className="bg-red-50 rounded-lg p-4 border border-red-200">
+        <div className="bg-red-50 rounded-lg p-3 md:p-4 border border-red-200">
           <div className="flex items-center justify-between">
-            <div>
-              <p className="text-red-600 text-sm font-medium">Dépenses Totales</p>
-              <p className="text-2xl font-bold text-red-800">${totalExpenses.toLocaleString()}</p>
+            <div className="min-w-0 flex-1">
+              <p className="text-red-600 text-xs md:text-sm font-medium truncate">Dépensé</p>
+              <p className="text-lg md:text-2xl font-bold text-red-800">${totalExpenses.toLocaleString()}</p>
             </div>
-            <TrendingDown className="w-8 h-8 text-red-600" />
+            <TrendingDown className="w-6 h-6 md:w-8 md:h-8 text-red-600 flex-shrink-0" />
           </div>
         </div>
 
-        <div className="bg-green-50 rounded-lg p-4 border border-green-200">
+        <div className="bg-green-50 rounded-lg p-3 md:p-4 border border-green-200">
           <div className="flex items-center justify-between">
-            <div>
-              <p className="text-green-600 text-sm font-medium">Budget Restant</p>
-              <p className="text-2xl font-bold text-green-800">${remainingBudget.toLocaleString()}</p>
+            <div className="min-w-0 flex-1">
+              <p className="text-green-600 text-xs md:text-sm font-medium truncate">Restant</p>
+              <p className="text-lg md:text-2xl font-bold text-green-800">${remainingBudget.toLocaleString()}</p>
             </div>
-            <TrendingUp className="w-8 h-8 text-green-600" />
+            <TrendingUp className="w-6 h-6 md:w-8 md:h-8 text-green-600 flex-shrink-0" />
           </div>
         </div>
 
-        <div className="bg-indigo-50 rounded-lg p-4 border border-indigo-200">
+        <div className="bg-indigo-50 rounded-lg p-3 md:p-4 border border-indigo-200">
           <div className="flex items-center justify-between">
-            <div>
-              <p className="text-indigo-600 text-sm font-medium">Économies Actuelles</p>
-              <p className={`text-2xl font-bold ${currentSavings >= 0 ? 'text-indigo-800' : 'text-red-800'}`}>
+            <div className="min-w-0 flex-1">
+              <p className="text-indigo-600 text-xs md:text-sm font-medium truncate">Économies</p>
+              <p className={`text-lg md:text-2xl font-bold ${currentSavings >= 0 ? 'text-indigo-800' : 'text-red-800'}`}>
                 ${currentSavings.toLocaleString()}
               </p>
             </div>
-            <Target className="w-8 h-8 text-indigo-600" />
+            <Target className="w-6 h-6 md:w-8 md:h-8 text-indigo-600 flex-shrink-0" />
           </div>
         </div>
       </div>

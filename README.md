@@ -17,6 +17,7 @@ Une application web moderne de gestion de budget familial avec interface graphiq
 
 ### 💸 **Gestion des Dépenses**
 - Ajout rapide par catégorie
+- **🎤 Saisie vocale intelligente** (nouveau !)
 - Historique détaillé
 - Attribution par membre de famille
 - Suppression facile
@@ -97,10 +98,20 @@ src/
 4. **Suivre les progrès** : Consultez le tableau de bord
 
 ### Fonctionnalités Avancées
+- **🎤 Commandes vocales** : Ajoutez des dépenses en parlant (Chrome/Edge/Safari)
 - **Graphiques détaillés** : Cliquez sur "Voir détails" dans l'onglet Famille
 - **Export des données** : Sauvegardez vos données via les Paramètres
 - **Multi-membres** : Gérez plusieurs membres avec données isolées
 - **Objectifs d'épargne** : Définissez et suivez vos objectifs
+
+### 🎤 Reconnaissance Vocale
+Dites simplement : *"Épicerie 25 euros courses alimentaires"* et l'application remplira automatiquement le formulaire !
+
+**Formats supportés :**
+- `"[Catégorie] [Montant] [Description]"`
+- `"[Montant] euros [Catégorie] [Description]"`
+
+**Navigateurs compatibles :** Chrome, Edge, Safari
 
 ## 💾 Gestion des Données
 
