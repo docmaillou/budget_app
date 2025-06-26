@@ -1,11 +1,26 @@
-# 💰 Budget Familial v1.0.0
+# 💰 Budget Familial v1.0.1
 
-Une application web moderne de gestion de budget familial avec interface graphique interactive.
+Une application web moderne de gestion de budget familial avec reconnaissance vocale et interface mobile optimisée.
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)
 ![React](https://img.shields.io/badge/React-18.3.1-61dafb.svg)
 ![Vite](https://img.shields.io/badge/Vite-5.4.0-646cff.svg)
 ![Tailwind](https://img.shields.io/badge/Tailwind-3.4.4-38bdf8.svg)
+
+## 🆕 Nouveautés v1.0.1
+
+### 🎤 **Reconnaissance Vocale**
+Ajoutez vos dépenses en parlant ! Dites simplement *"Épicerie 25 euros courses"* et l'application remplira automatiquement le formulaire.
+
+### 📱 **Interface Mobile Optimisée**
+- Navigation en bas d'écran sur mobile
+- Interface compacte et responsive
+- Cartes et textes adaptés aux petits écrans
+
+### 🎯 **UX Améliorée**
+- Logo cliquable intelligent (ferme paramètres + va au dashboard)
+- Popup d'aide pour les commandes vocales
+- Navigation cohérente sur tous les écrans
 
 ## 🚀 Fonctionnalités
 
@@ -131,4 +146,26 @@ Dites simplement : *"Épicerie 25 euros courses alimentaires"* et l'application 
 - Animations CSS fluides
 - Icônes intuitives
 
-**Développé avec ❤️ Par CharlyBoi pour simplifier la gestion de budget familial**
+## 📈 Performance
+
+- **Bundle JS** : 238KB (70KB gzippé)
+- **Bundle CSS** : 19KB (4KB gzippé)
+- **Chargement rapide** : Optimisé Vite
+- **Rendu optimisé** : React mémorisé
+- **Reconnaissance vocale** : Traitement 100% local
+
+## 🔄 Versions
+
+### v1.0.1 (Actuelle)
+- ✅ 🎤 Reconnaissance vocale intelligente
+- ✅ 📱 Interface mobile optimisée
+- ✅ 🎯 UX améliorée (logo cliquable, navigation cohérente)
+- ✅ 🎨 Popup d'aide pour commandes vocales
+
+### v1.0.0
+- ✅ Toutes les fonctionnalités de base
+- ✅ Graphiques interactifs
+- ✅ Interface responsive
+- ✅ Sauvegarde locale
+
+**Développé avec ❤️ pour simplifier la gestion de budget familial**
