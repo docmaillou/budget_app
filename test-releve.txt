@@ -1,0 +1,14 @@
+RELEVÉ DE COMPTE - TEST
+Pour la période du 1er janvier au 31 janvier 2025
+
+Date  Code    Description                                    Retrait    Solde
+
+6 JAN ACH    Achat / PHARMACIE UNIPRIX ANDR                  5.34      360.67
+6 JAN ACH    Achat / RESTAURANT M&K                         26.57      234.10
+8 JAN APA    Achat préautorisé / PETRO-CANADA 13967        20.00      164.10
+13 JAN ACH   Achat / MCDONALD'S #40051                       7.25     1262.91
+16 JAN ACH   Achat / METRO PLUS REPENTIGNY                  85.40     1177.51
+20 JAN ACH   Achat / MCDONALD'S #40051                      11.86      581.65
+24 JAN ACH   Achat / RESTAURANT LA BELLE PR                 10.54     1905.60
+29 JAN ACH   Achat / COSTCO WHOLESALE                       45.67     1687.26
+30 JAN APA   Achat préautorisé / SHELL CANADA               25.05     1732.21

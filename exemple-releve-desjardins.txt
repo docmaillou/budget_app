@@ -1,0 +1,52 @@
+RELEVÉ DE COMPTE
+SJ 815-30514-1
+
+CHARLES-ANTOINE POITRAS
+43 RUE LABELLE
+L'ASSOMPTION QC J5W 2X2
+
+Pour la période
+du 1er janvier au 31 janvier 2025
+
+COP                    COMPTE PROFIT JEUNESSE DESJARDINS
+Date  Code    Description                                    Frais    Retrait    Dépôt    Solde
+
+1 JAN VMW    Virement Interac à / EMT Payment /                      300.00              625.76
+2 JAN VMW    Virement Interac à / papa phone /                       215.00              410.76
+3 JAN RA     Paiement / BENEVA                                        44.75               366.01
+6 JAN ACH    Achat / PHARMACIE UNIPRIX ANDR                           5.34                360.67
+6 JAN RA     Retrait direct / Wealthsimple Investments Inc.           50.00               310.67
+6 JAN RA     Retrait direct / Wealthsimple Investments Inc.           50.00               260.67
+6 JAN ACH    Achat / RESTAURANT M&K                                   26.57               234.10
+7 JAN RA     Retrait direct / Wealthsimple Investments Inc.           50.00               184.10
+8 JAN APA    Achat préautorisé / PETRO-CANADA 13967                  20.00               164.10
+8 JAN APA    Achat préautorisé / PETRO-CANADA 13967                   6.80               157.30
+9 JAN DI     Paie / PMG TECHNOLOGIES INC.                                      1 856.45  2 013.75
+10 JAN RA    Retrait direct / Wealthsimple Investments Inc.           70.00             1 943.75
+10 JAN PWW   Paiement facture - AccèsD Internet / Remises pour étudiants
+             Visa De                                                  523.59             1 420.16
+10 JAN VMW   Virement Interac à / papa phone /                       150.00             1 270.16
+13 JAN ACH   Achat / MCDONALD'S #40051                                 7.25             1 262.91
+16 JAN ACH   Achat / SQDC77059 REPENTIGNY                             85.40             1 177.51
+16 JAN RA    Retrait direct / Wealthsimple Investments Inc.          250.00               927.51
+17 JAN RA    Retrait direct / Wealthsimple Investments Inc.          250.00               677.51
+17 JAN VMW   Virement Interac à / papa phone /                        44.00               633.51
+20 JAN VMW   Virement Interac à / papa phone /                        40.00               593.51
+20 JAN ACH   Achat / MCDONALD'S #40051                                11.86               581.65
+20 JAN ACH   Achat / SQDC77059 REPENTIGNY                            141.60               440.05
+20 JAN RA    Retrait direct / Wealthsimple Investments Inc.           20.00               420.05
+23 JAN DI    Paie / PMG TECHNOLOGIES INC.                                      5 313.08  5 733.13
+23 JAN PWW   Paiement facture - AccèsD Internet / Remises pour étudiants
+             Visa De                                                4 500.00             1 233.13
+23 JAN PWW   Paiement facture - AccèsD Internet / Remises pour étudiants
+             Visa De                                                  850.00               383.13
+23 JAN DI    Placement / Wealthsimple Investments Inc.                         1 541.69  1 924.82
+24 JAN ACH   Achat / MCDONALD'S #40051                                 8.68             1 916.14
+24 JAN ACH   Achat / RESTAURANT LA BELLE PR                          10.54             1 905.60
+24 JAN ACH   Achat / MCDONALD'S #40051                                11.86             1 893.94
+24 JAN VMW   Virement Interac à / papa phone /                       150.00             1 743.94
+27 JAN RA    Retrait direct / Wealthsimple Investments Inc.           20.00             1 723.94
+27 JAN RA    Retrait direct / Wealthsimple Investments Inc.           20.00             1 703.94
+29 JAN ACH   Achat / MCDONALD'S #40051                                16.68             1 687.26
+30 JAN VMW   Virement Interac de / NANTHA GRAVEL /                              70.00   1 757.26
+30 JAN APA   Achat préautorisé / MARCH ORANGE                         25.05             1 732.21

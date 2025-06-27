@@ -151,7 +151,26 @@ const FamilyBudgetApp = () => {
     [categories, categorySpending, currentData.budgets]
   );
 
-  const addExpense = useCallback(() => {
+  const addExpense = useCallback((importedExpense = null) => {
+    // Si une dépense importée est fournie, l'utiliser directement
+    if (importedExpense) {
+      console.log('📝 Ajout d\'une dépense importée:', importedExpense);
+      const expense = {
+        id: importedExpense.id || Date.now(),
+        category: importedExpense.category,
+        amount: importedExpense.amount,
+        description: importedExpense.description,
+        date: importedExpense.date,
+        member: currentMember
+      };
+
+      const updatedExpenses = [expense, ...currentData.expenses];
+      updateMemberData(currentMember, { expenses: updatedExpenses });
+      console.log('✅ Dépense importée ajoutée avec succès');
+      return;
+    }
+
+    // Sinon, utiliser la logique normale du formulaire
     if (!newExpense.amount || !newExpense.description) return;
 
     const expense = {
